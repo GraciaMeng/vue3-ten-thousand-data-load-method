@@ -2,12 +2,12 @@
  * @Description: 
  * @Author: Gracia
  * @Date: 2022-01-15 16:16:42
- * @LastEditTime: 2022-01-15 16:22:04
+ * @LastEditTime: 2022-01-22 17:04:29
  * @LastEditors: Gracia
 -->
 <template>
   <div class="table">
-    <el-table v-loading="loading" :data="list" border style="width: 80%">
+    <el-table v-loading="loading" :data="list" border style="width: 100%">
       <el-table-column prop="id" label="序号" />
       <el-table-column prop="ctime" label="创建时间" />
       <el-table-column prop="nickname" label="姓名" />

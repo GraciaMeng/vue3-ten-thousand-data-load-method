@@ -2,17 +2,19 @@
  * @Description: 
  * @Author: Gracia
  * @Date: 2022-01-15 10:11:17
- * @LastEditTime: 2022-01-19 08:46:00
+ * @LastEditTime: 2022-01-22 17:09:30
  * @LastEditors: Gracia
 -->
 
 <template>
+  <Header />
   <div class="container">
     <router-view />
   </div>
 </template>
 
 <script setup>
+import Header from "./layout/Header.vue";
 </script>
 
 <style>
@@ -27,9 +29,14 @@
 html,
 body {
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 .container {
   width: 80%;
   margin: 0 auto;
+  padding-top: 80px;
+  padding-bottom: 50px;
+  min-height: calc(100vh - 80px - 50px);
 }
 </style>
