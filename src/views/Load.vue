@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: Gracia
  * @Date: 2022-01-17 21:18:28
- * @LastEditTime: 2022-01-19 08:51:15
+ * @LastEditTime: 2022-01-22 17:08:16
  * @LastEditors: Gracia
 -->
 <template>
@@ -24,10 +24,8 @@ const { load, list, loading, throttleScrollEvent } = useLoadListData($axios);
 <style scoped>
 .load {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  top: 80px;
+  width: 80%;
   height: 100%;
   overflow: auto;
 }
