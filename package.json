@@ -1,9 +1,10 @@
 {
   "name": "vue3-ten-thousand-data-app",
+  "homepage": "/vue3-ten-thousand-data-client",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build --base=/vue3-ten-thousand-data-client",
     "preview": "vite preview"
   },
   "dependencies": {

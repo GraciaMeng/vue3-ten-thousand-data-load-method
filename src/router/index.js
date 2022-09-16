@@ -26,12 +26,12 @@ const routes = [{
 }, {
   path: '/load',
   component: () => import("../views/Load.vue")
-}, , {
+}, {
   path: '/virtual',
   component: () => import("../views/virtual.vue")
 }]
 
 export default createRouter({
-  history: createWebHistory(),
+  history: createWebHistory('/vue3-ten-thousand-data-client/'),
   routes
 })
