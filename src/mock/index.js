@@ -10,7 +10,7 @@ import Mock from "mockjs";
 
 Mock.mock('/api/data', {
   "code": 200,
-  "data|100": [{
+  "data|10000": [{
     "id|+1": 1,
     "ctime": "@datetime",
     "nickname": "@cname",

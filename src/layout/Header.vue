@@ -13,21 +13,15 @@
     </div>
     <div class="right-header">
       <div class="link" v-for="(item, index) in urlList" :key="index">
-        <router-link :to="item.to">{{ item.path }}</router-link>
+        <router-link :to="item.to">{{ item.title }}</router-link>
       </div>
     </div>
   </header>
 </template>
 
 <script setup>
-const urlList = [
-  { to: "/", path: "首页" },
-  { to: "/animate", path: "帧动画" },
-  { to: "/cut", path: "切片分页" },
-  { to: "/time-animate", path: "计时器帧动画" },
-  { to: "/load", path: "触底加载" },
-  { to: "/virtual", path: "虚拟列表" },
-];
+import { generateRoute } from '../router';
+const urlList = generateRoute()
 </script>
 
 <style scoped>
