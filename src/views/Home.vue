@@ -8,10 +8,15 @@
 <template>
   <div class="home">
     <img src="../assets/logo.png" alt="logo" />
+    <ComputeTable :list="computeData" />
   </div>
 </template>
 
 <script setup>
+  import ComputeTable from "../components/ComputeTable.vue";
+import { useDataStoreToRefs } from '../store/useDataStore';
+const { computeData, dataStore } = useDataStoreToRefs()
+dataStore.initData()
 </script>
 <style scoped>
 .home {

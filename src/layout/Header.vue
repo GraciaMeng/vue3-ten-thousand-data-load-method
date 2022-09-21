@@ -60,6 +60,7 @@ const urlList = generateRoute()
 }
 .link a {
   text-decoration: none;
+  color: #000;
 }
 a:visited {
   color: #000;

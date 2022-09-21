@@ -68,6 +68,6 @@ export function generateRoute() {
 }
 
 export default createRouter({
-  history: createWebHistory('/vue3-ten-thousand-data-client/'),
+  history: createWebHistory(import.meta.env.MODE === 'production' ? '/vue3-ten-thousand-data-client/' : ''),
   routes
 })

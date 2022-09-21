@@ -10,11 +10,15 @@ import {
   onBeforeMount,
   ref
 } from "vue";
+import { useComputeLoadTime } from './useComputeLoadTime';
 
 export function useRequestData(request, callback) {
   const allData = ref([]);
   const loading = ref(true);
+  const { startCompute, queueComputeJob } = useComputeLoadTime()
+  
   onBeforeMount(() => {
+    startCompute()
     new Promise((resolve, reject) => {
       request.get(`/api/data`).then(res => resolve(res)).catch(err => reject(err))
     }).then(res => {
@@ -22,9 +26,10 @@ export function useRequestData(request, callback) {
         data: dataList
       } = res.data;
       allData.value = dataList;
-      callback(dataList);
+      if (callback) callback(dataList);
     }).finally(() => {
       loading.value = false;
+      queueComputeJob()
     })
   })
   return {

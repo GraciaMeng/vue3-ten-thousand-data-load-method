@@ -13,10 +13,11 @@ import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 import "./mock"
 import axios from "axios";
-
+import createStore from './store'
 import App from './App.vue'
 
 const app = createApp(App);
 app.config.globalProperties.$axios = axios;
-app.use(router).use(ElementPlus)
+const store = createStore()
+app.use(router).use(store).use(ElementPlus)
 app.mount('#app')
