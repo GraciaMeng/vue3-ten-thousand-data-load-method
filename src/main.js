@@ -9,8 +9,7 @@ import {
   createApp
 } from 'vue'
 import router from './router'
-import ElementPlus from 'element-plus'
-import 'element-plus/dist/index.css'
+// import 'element-plus/dist/index.css'
 import "./mock"
 import axios from "axios";
 import createStore from './store'
@@ -19,5 +18,5 @@ import App from './App.vue'
 const app = createApp(App);
 app.config.globalProperties.$axios = axios;
 const store = createStore()
-app.use(router).use(store).use(ElementPlus)
+app.use(router).use(store)
 app.mount('#app')
